@@ -1,0 +1,43 @@
+{
+  "name": "felid-handlebars",
+  "version": "1.0.0",
+  "description": "Render Handlebars templates for Felid.js",
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "standard --fix src/*.js test/*.js | snazzy",
+    "test": "npm run lint && npm run unit",
+    "unit": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felidjs/felid-handlebars.git"
+  },
+  "keywords": [
+    "handlebars",
+    "template",
+    "felid",
+    "felid-plugin"
+  ],
+  "author": "zoron (https://github.com/fralonra/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/felidjs/felid-handlebars/issues"
+  },
+  "homepage": "https://github.com/felidjs/felid-handlebars#readme",
+  "devDependencies": {
+    "felid": "^0.0.4",
+    "injectar": "^1.4.0",
+    "jest": "^24.9.0",
+    "pre-commit": "^1.2.2",
+    "snazzy": "^8.0.0",
+    "standard": "^14.3.1"
+  },
+  "dependencies": {
+    "lru-cache": "^5.1.1"
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ]
+  }
+}
