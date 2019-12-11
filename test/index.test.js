@@ -113,7 +113,7 @@ describe('options', () => {
     instance.get('/test', (req, res) => {
       res.render('index.hbs')
     })
-  
+
     injectar(instance.lookup())
       .get('/test')
       .end((err, res) => {
@@ -142,7 +142,7 @@ describe('options', () => {
     instance.get('/test', (req, res) => {
       res.render('test/static/helper.hbs', data)
     })
-  
+
     const engine = hbs.create()
     engine.registerHelper('if_eq', (a, b, opts) => {
       if (a === b) return opts.fn(this)
@@ -168,7 +168,7 @@ describe('options', () => {
     instance.get('/test', (req, res) => {
       res.hbs('test/static/index.hbs')
     })
-  
+
     injectar(instance.lookup())
       .get('/test')
       .end((err, res) => {
