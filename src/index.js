@@ -30,6 +30,7 @@ function compileTemplate (file, cache, context) {
       data = fs.readFileSync(path.resolve(context.root, file), context.charset)
     } catch (e) {
       reject(e)
+      return
     }
     data = context.engine.compile(data)
     if (cache) {
@@ -45,6 +46,7 @@ function getTemplate (page, cache, context) {
       const data = cache.get(page)
       if (data) {
         resolve(data)
+        return
       }
     }
     compileTemplate(page, cache, context)
