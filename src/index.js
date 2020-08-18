@@ -109,7 +109,7 @@ function plugin (felid, options) {
     ...defaultDecoratorKeys,
     ...context.decorator
   }
-  felid.decorateResponse(decoratorKeys.render, renderTemplate(cache, context))
+  felid.decorateResponse(decoratorKeys.render, () => renderTemplate(cache, context))
 }
 
 module.exports = plugin
