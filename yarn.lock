@@ -138,6 +138,25 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
+"@felid/core@0.1.0-alpha.5":
+  version "0.1.0-alpha.5"
+  resolved "https://registry.yarnpkg.com/@felid/core/-/core-0.1.0-alpha.5.tgz#52968f8f2074f3dd7de84e0669b4ccf558bc0792"
+  integrity sha512-VRaSfjCzepdhchb4l4RPRyULcXWsjh53MmLaZUZaWE7i2exQPfxzakscBxOJqhpwGCFd2R06Z9olfqtGfRajzQ==
+  dependencies:
+    "@felid/server" "0.1.0-alpha.4"
+    "@felid/symbols" "0.1.0-alpha.3"
+    tiniocc "^0.0.2"
+
+"@felid/server@0.1.0-alpha.4":
+  version "0.1.0-alpha.4"
+  resolved "https://registry.yarnpkg.com/@felid/server/-/server-0.1.0-alpha.4.tgz#8d99169813999c029fa2cb5535fa3cdf99534d72"
+  integrity sha512-0EYQzn/8CoVXobR0JZ6K8qi8QH62zLUUADDosJYt4GG5QPrGypGIfNiksbKoa0VeLHQFa1JuZLMHTcrSWaEfNg==
+
+"@felid/symbols@0.1.0-alpha.3":
+  version "0.1.0-alpha.3"
+  resolved "https://registry.yarnpkg.com/@felid/symbols/-/symbols-0.1.0-alpha.3.tgz#9234723f9234a673a3d754abb0fd2d7b1d4260ba"
+  integrity sha512-5Kq/haYYNGpg0lnysKEmsxOVAUawBhzzcdIDIBNXO6Fr500/Sc/ugVKE7JWIbJ4TC8Dn43Gide55CYZMQjlm4w==
+
 "@jest/console@^24.7.1", "@jest/console@^24.9.0":
   version "24.9.0"
   resolved "https://registry.yarnpkg.com/@jest/console/-/console-24.9.0.tgz#79b1bc06fb74a8cfb01cbdedf945584b1b9707f0"
@@ -365,6 +384,11 @@ abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
   integrity sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==
+
+abstract-logging@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/abstract-logging/-/abstract-logging-2.0.0.tgz#08a85814946c98ef06f4256ad470aba1886d4490"
+  integrity sha512-/oA9z7JszpIioo6J6dB79LVUgJ3eD3cxkAmdCkvWWS+Y9tPtALs1rLqOekLUXUbYqM2fB9TTK0ibAyZJJOP/CA==
 
 acorn-globals@^4.1.0:
   version "4.3.4"
@@ -1426,11 +1450,14 @@ fb-watchman@^2.0.0:
   dependencies:
     bser "^2.0.0"
 
-felid@^0.0.4:
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/felid/-/felid-0.0.4.tgz#46f24d565161f05242d78fd1caae97957bf8fcec"
-  integrity sha512-J6jtjL/UhdVVkBPIFAWuVWDkj0u4Vi1jlqqp1LHg8+50wmk1L0JzpUxzG81W4RZ5ehdVJ63sBQP0t/p5RWeEjQ==
+felid@^0.1.0-alpha.4:
+  version "0.1.0-alpha.5"
+  resolved "https://registry.yarnpkg.com/felid/-/felid-0.1.0-alpha.5.tgz#16efaf0162ca0663ea4d1df710c5786625427c12"
+  integrity sha512-rw0L6cWpmt/+bWauZnEJG91ZQL6OKePgQDzSQmCSpSEDmK25/rpQNZAXjAEkpdFWKgxVtTfbOXuqaAz6ITosSQ==
   dependencies:
+    "@felid/core" "0.1.0-alpha.5"
+    "@felid/symbols" "0.1.0-alpha.3"
+    abstract-logging "^2.0.0"
     delegates "^1.0.0"
     find-my-way "^2.1.0"
 
@@ -4096,6 +4123,11 @@ through@^2.3.6:
   resolved "https://registry.yarnpkg.com/through/-/through-2.3.8.tgz#0dd4c9ffaabc357960b1b724115d7e0e86a2e1f5"
   integrity sha1-DdTJ/6q8NXlgsbckEV1+Doai4fU=
 
+tiniocc@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/tiniocc/-/tiniocc-0.0.2.tgz#18bc930214edef89959a0c8034bcc7d6e29ae40c"
+  integrity sha512-SbM9sBtmZRer4jOTBnXUvMFUh7P0yaT/MlLP8i15sBCs9QU4O+xV0iE+rqnwl218FNhYDzTfyDwwsKfOvTGjLA==
+
 tmp@^0.0.33:
   version "0.0.33"
   resolved "https://registry.yarnpkg.com/tmp/-/tmp-0.0.33.tgz#6d34335889768d21b2bcda0aa277ced3b1bfadf9"
@@ -4431,9 +4463,9 @@ yallist@^3.0.0, yallist@^3.0.2, yallist@^3.0.3:
   integrity sha512-a4UGQaWPH59mOXUYnAG2ewncQS4i4F43Tv3JoAM+s2VDAmS9NsK8GpDMLrCHPksFT7h3K6TOoUNn2pb7RoXx4g==
 
 yargs-parser@^13.1.1:
-  version "13.1.1"
-  resolved "https://registry.yarnpkg.com/yargs-parser/-/yargs-parser-13.1.1.tgz#d26058532aa06d365fe091f6a1fc06b2f7e5eca0"
-  integrity sha512-oVAVsHz6uFrg3XQheFII8ESO2ssAf9luWuAd6Wexsu4F3OtIW0o8IribPXYrD4WC24LWtPrJlGy87y5udK+dxQ==
+  version "13.1.2"
+  resolved "https://registry.yarnpkg.com/yargs-parser/-/yargs-parser-13.1.2.tgz#130f09702ebaeef2650d54ce6e3e5706f7a4fb38"
+  integrity sha512-3lbsNRf/j+A4QuSZfDRA7HRSfWrzO0YjqTJd5kjAq37Zep1CEgaYmrH9Q3GwPiB9cHyd1Y1UwggGhJGoxipbzg==
   dependencies:
     camelcase "^5.0.0"
     decamelize "^1.2.0"
