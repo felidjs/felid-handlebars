@@ -1,6 +1,9 @@
 # felid-handlebars
 
-[![npm version](https://img.shields.io/npm/v/felid-handlebars.svg)](https://www.npmjs.com/package/felid-handlebars) [![Build Status](https://travis-ci.com/felidjs/felid-handlebars.svg?branch=master)](https://travis-ci.com/felidjs/felid-handlebars) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![npm version](https://img.shields.io/npm/v/felid-handlebars.svg)](https://www.npmjs.com/package/felid-handlebars)
+![Node.js CI](https://github.com/felidjs/felid-handlebars/workflows/Node.js%20CI/badge.svg)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![codecov](https://codecov.io/gh/felidjs/felid-handlebars/branch/master/graph/badge.svg)](https://codecov.io/gh/felidjs/felid-handlebars)
 
 A [Felid](https://github.com/felidjs/felid) plugin for rendering [Handlebars](https://github.com/wycats/handlebars.js) templates.
 
