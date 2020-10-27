@@ -66,6 +66,24 @@ describe('render templates', () => {
       })
   })
 
+  test('Should render templates without extensions', (done) => {
+    const instance = new Felid()
+    instance.plugin(hbsPlugin)
+    instance.get('/test', (req, res) => {
+      res.render('test/static/index', data)
+    })
+
+    injectar(instance.lookup())
+      .get('/test')
+      .end((err, res) => {
+        expect(err).toBe(null)
+        expect(res.statusCode).toBe(200)
+        expect(res.headers['content-type']).toBe('text/html; charset=utf-8')
+        expect(res.payload).toBe(hbs.compile(fs.readFileSync(path.resolve(__dirname, 'static/index.hbs'), 'utf8'))(data))
+        done()
+      })
+  })
+
   test('Should not override `Content-Type` header if it has been set', (done) => {
     const instance = new Felid()
     instance.plugin(hbsPlugin)

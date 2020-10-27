@@ -26,6 +26,16 @@ function cacheTemplates (cache, context) {
 function compileTemplate (file, cache, context) {
   return new Promise((resolve, reject) => {
     let data
+    const pathData = path.parse(file)
+    if (!pathData.ext) {
+      const extensions = ['hbs', 'html']
+      for (const extension of extensions) {
+        if (fs.existsSync(`${file}.${extension}`)) {
+          file = `${file}.${extension}`
+          break
+        }
+      }
+    }
     try {
       data = fs.readFileSync(path.resolve(context.root, file), context.charset)
     } catch (e) {
